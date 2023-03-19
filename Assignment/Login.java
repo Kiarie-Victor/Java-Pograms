@@ -9,9 +9,7 @@ private JTextField jtusername;
 private JButton blogin,bexit,bclear; 
 private char getpass[];
 private String username;
-
-    public Login(){
-    
+    public Login(){  
         super("Login");
         jusername=new JLabel("Usename");
         jusername.setBounds(100, 100, 200, 30);
@@ -35,7 +33,6 @@ private String username;
         bclear.setBounds(360,200,80,30);
         bclear.addActionListener(new Inner());
 
-
         setVisible(true);
         setSize(1000, 1000);
         setLayout(null);
@@ -47,8 +44,6 @@ private String username;
         add(blogin);
         add(bexit);
         add(bclear);
-
-
     }
     private class Inner implements ActionListener{
         public void actionPerformed(ActionEvent e ){
@@ -74,18 +69,16 @@ private String username;
                             if(password[i]==getpass[i]){
                             JOptionPane.showMessageDialog(rootPane,"Loged in succesfully");
                             setVisible(false);
+                                }
+                            }
                     }
                     else{
                         JOptionPane.showMessageDialog(rootPane,"Incorrect password");
-                            }
-                    
-                        }
                     }
-                   }   
-        }
-              
-    }
-}
+                }
+            }
+        }                
+    }            
     public static void main(String [] argd){
         new Login();
     }
