@@ -2,13 +2,14 @@ package Assignment;
 import javax.swing.*;
 import java.awt.event.*;
 public class Calc extends JFrame {
- private JLabel input1,input2,result;
- private JButton but1,but2,but3;
- private JTextField num1,num2,answer;
- private float sum,product,difference;
+ private JLabel input1,input2;
+ private JButton but1,but2,but3,but4;
+ private JTextField num1,num2;
+ private float sum,product,division,subtraction;
  private float value1,value2;
  
  public Calc (){
+    super("Simple Calc");
     input1=new JLabel("Input");
     input1.setBounds(100, 100, 200,30);
 
@@ -28,7 +29,7 @@ public class Calc extends JFrame {
            value1=Float.parseFloat(num1.getText());
            value2=Float.parseFloat(num2.getText());
            sum=value1+value2;
-           JOptionPane.showMessageDialog(rootPane,"The sum is "+sum);
+           JOptionPane.showMessageDialog(rootPane,"The sum is \n"+sum);
 
         }
     });
@@ -38,16 +39,25 @@ public class Calc extends JFrame {
     but2.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
             product=value1*value2;
-            JOptionPane.showMessageDialog(rootPane,"The product is "+product);
+            JOptionPane.showMessageDialog(rootPane,"The product is \n"+product);
         }
     });
 
-    but3=new JButton("difference");
-    but3.setBounds(400,200,160, 30);
+    but3=new JButton("Division");
+    but3.setBounds(400,200,140, 30);
     but3.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
-            difference=product-sum;
-            JOptionPane.showMessageDialog(rootPane,"The difference is "+difference);
+            division =value1 / value2;
+            JOptionPane.showMessageDialog(rootPane,"The division of the two values is \n"+division);
+        }
+    });
+
+    but4=new JButton("Subtraction");
+    but4.setBounds(570, 200,140 , 30);
+    but4.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            subtraction=value1-value2;
+            JOptionPane.showMessageDialog(rootPane,"The difference between the two values is \n "+subtraction);
         }
     });
 
@@ -62,6 +72,7 @@ public class Calc extends JFrame {
     add(but1);
     add(but2);
     add(but3);
+    add(but4);
 
  }
  public static void main(String[]s){
