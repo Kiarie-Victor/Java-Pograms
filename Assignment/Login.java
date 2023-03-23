@@ -185,7 +185,7 @@ JFrame frame1,frame2;
                                     JOptionPane.showMessageDialog(frame2, "A gentleman was using the system");
                                 }
                                 else if(man2.isSelected()){
-                                    JOptionPane.showMessageDialog(frame2,"A lady was using the system");
+                                    JOptionPane.showMessageDialog(frame2,"A lady     was using the system");
                                 }
                                 else{
                                     JOptionPane.showMessageDialog(frame2,"Couldnt validate the gender that was using the system");
