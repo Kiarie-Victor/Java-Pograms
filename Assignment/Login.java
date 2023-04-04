@@ -1,6 +1,8 @@
 package Assignment;
 //import javax.lang.model.util.ElementScanner14;
 import javax.swing.*;
+
+import java.awt.Panel;
 import java.awt.event.*;
 public class Login {
 private JLabel jusername,jpassword;
