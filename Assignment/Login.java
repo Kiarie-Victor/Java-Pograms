@@ -60,9 +60,7 @@ JFrame frame1,frame2;
                 System.exit(0);
             }
             else{
-
-            }
-            
+            }           
         }
         else if(e.getSource()==bclear){
             jtusername.setText("");
@@ -201,11 +199,9 @@ JFrame frame1,frame2;
                  JOptionPane.showMessageDialog(null,"Incorrect password");
                 }
             }
-
          }
     }
-}
-  
+} 
     public static void main(String [] argd){
         new Login();
     }
